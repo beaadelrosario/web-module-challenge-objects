@@ -41,7 +41,6 @@ function discount(customer){
 
 console.log (discount("zave"));
 
-
 ///////////////Reviews (MVP)///////////////////
 
 const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
@@ -56,11 +55,25 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 4: Console.log just Julius' feedback */
 
+console.log (reviews[5]);
 
 /* Task 5: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+function addReview(arr,name,rating,feedback){
+  arr.push([name,rating,feedback]);
+  return arr;
+}
+console.log(addReview(reviews,"Bea",3,"Food was okay."))
 
 
-/* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
+
+function updateReview (array,index,feedback) {
+  array[index].feedback = feedback;
+  return array;
+}
+
+console.log (updateReview(reviews, 7, "this place is chill with really cool people, great for getting work done on weekdays"));
+
 
 /*  Task 7: Write a function to return a review based on the index of the review in the array.
 
